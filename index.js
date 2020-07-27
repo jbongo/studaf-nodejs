@@ -13,9 +13,7 @@ const PORT = 4000;
 // connection a mongodb
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/studafdb', {
-    useMongoClient: true
-});
+mongoose.connect('mongodb://localhost/studafdb',{ useNewUrlParser: true });
 
 // bodyParser
 
