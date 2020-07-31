@@ -3,22 +3,32 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-const CandidatureSchema = new Schema({
+const Alerte_candidatSchema = new Schema({
 
-    user_id: {
+
+    titre: {
         type: String,
-        required: 'Entrez le id de l\'utilisateur '
+        required: 'Entrez le titre'
     },
-    offre_id: {
-        type: String,
-        required: 'Entrez le id de l\'offre '
-    },
-    cv: {
+    poste: {
         type: String,
     },
-    lettre_motivation: {
+    competences: {
         type: String,
     },
+    sexe: {
+        type: String,
+    },
+
+    pays: {
+        type: String,
+
+    },
+    ville: {
+        type: String,
+
+    },
+
 
     date_creation: {
         type: Date,

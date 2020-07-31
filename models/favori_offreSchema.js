@@ -3,21 +3,15 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-const CandidatureSchema = new Schema({
+const Favori_offreSchema = new Schema({
 
     user_id: {
         type: String,
-        required: 'Entrez le id de l\'utilisateur '
+        required: 'Entrez le user_id'
     },
     offre_id: {
         type: String,
-        required: 'Entrez le id de l\'offre '
-    },
-    cv: {
-        type: String,
-    },
-    lettre_motivation: {
-        type: String,
+        required: 'Entrez le offre_id'
     },
 
     date_creation: {
