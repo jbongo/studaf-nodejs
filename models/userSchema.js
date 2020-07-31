@@ -17,49 +17,56 @@ const UserSchema = new Schema({
         type: String,
         required: 'token absent'
     },
+    type: {
+        type: String,
+        reuired: "entrez un type"
+    },
+    nom: {
+        type: String,
+    },
+    prenom: {
+        type: String,
+    },
+    poste: {
+        type: String,
+    },
+    experience: {
+        type: String,
+    },
+    date_naissance: {
+        type: Date,
+    },
+
+    raison_sociale: {
+        type: String,
+    },
+    date_creation_entreprise: {
+        type: Date,
+    }, 
+    nb_salarie: {
+        type: Number,
+    },
+    categorie: {
+        type: String,
+    },
+
+
+    pays: {
+        type: String,
+    },
+    ville: {
+        type: String,
+    },
+    description: {
+        type: String,
+        
+    },
     contact1: {
         type: String,
         
     },
     contact2: {
-        type: String,
-        
-    },
-    nom: {
-        type: String,
-        required: 'Entrez un nom'
-    },
-    prenom: {
-        type: String,
-        required: 'Entrez un prenom'
-    },
-    raison_sociale: {
-        type: String,
-        required: 'Entrez un prenom'
-    },
-    poste: {
-        type: String,
-        required: 'Entrez une  '
-    },
-    experience: {
-        type: String,
-        required: 'Entrez votre expérience'
-    },
-    date_naissance: {
-        type: String,
-       
-    },
-    pays: {
-        type: String,
-       
-    },
-    ville: {
-        type: String,
-     
-    },
-    description: {
-        type: String,
-        
+        type: String, 
     },
     facebook: {
         type: String,
@@ -72,11 +79,23 @@ const UserSchema = new Schema({
     linkedin: {
         type: String,
     },
+    site_web: {
+        type: String,
+    },
+    photo_profil: {
+        type: String,
+    },
+    photo_couverture: {
+        type: String,
+    },
+
     date_creation: {
         type: Date,
+        default: Date.now,
     },
     date_modification: {
         type: Date,
+        default: Date.now,
     }
 });
 
