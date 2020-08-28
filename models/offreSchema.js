@@ -51,7 +51,7 @@ const OffreSchema = new Schema({
     },
     date_expiration: {
         type: Date,
-        required: "entrez une date d'expiration",
+
     },
     date_creation: {
         type: Date,
@@ -63,3 +63,4 @@ const OffreSchema = new Schema({
     }
 });
 
+module.exports = OffreSchema;

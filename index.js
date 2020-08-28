@@ -1,4 +1,4 @@
- express = require('express') ;
+ express = require('express');
  routes = require('./routes/routes');
 
  mongoose = require('mongoose');
@@ -6,29 +6,42 @@
 
 
 
-app = express();
-const PORT = 4000;
+ app = express();
+ const PORT = 4000;
 
 
-// connection a mongodb
+ // connection a mongodb
 
-mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/studafdb',{ useNewUrlParser: true });
+ mongoose.Promise = global.Promise;
+ mongoose.connect('mongodb://localhost/studafdb', { useNewUrlParser: true });
 
-// bodyParser
+ // bodyParser
 
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(bodyParser.json())
+ app.use(bodyParser.urlencoded({ extended: true }));
+ app.use(bodyParser.json());
 
-routes(app);
+ // Add headers
+ app.use(function(req, res, next) {
+
+     // Website you wish to allow to connect
+     res.header({
+         'content-type': 'application/json',
+         'Access-Control-Allow-Origin': "http://127.0.0.1:3000"
+     });
+
+
+     next();
+ });
+
+ routes(app);
 
 
 
 
 
-//  Démarrage du serveur
-app.listen(PORT, ()=>{
+ //  Démarrage du serveur
+ app.listen(PORT, () => {
 
-    console.log(`Démarrage du serveur sur le port ${PORT}`);
-    
-})
+     console.log(`Démarrage du serveur sur le port ${PORT}`);
+
+ })
