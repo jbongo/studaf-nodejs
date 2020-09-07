@@ -8,9 +8,10 @@ const Offre = mongoose.model('Offre', OffreSchema);
 
 const addOffre = (req, res) => {
 
-
     var headerAutho = req.headers['authorization'];
+
     var userId = jwtUtils.getUserId(headerAutho);
+    
 
 
     if (userId < 0) {
@@ -88,11 +89,12 @@ const getAllOffre = (req, res) => {
 
         if (offresfound) {
 
-            return res.send(offresfound)
+            console.log(offresfound[0]);
+            return res.status(201).json({ 'data' : offresfound })
         } else {
 
             return res.send("Aucune offre trouvée")
-        }
+        } 
     })
 }
 

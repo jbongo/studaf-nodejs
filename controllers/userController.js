@@ -87,7 +87,7 @@ const register = (req, res) => {
                         }
                         res.status(201).json({ user });
                         return;
-                    })
+                    });
                 });
             } else {
                 return res.status(409).json({ 'error': "l\'adresse mail existe déjà" });
@@ -175,9 +175,6 @@ const getUserProfile = (req, res) => {
         }
     })
 }
-
-
-
 
 
 

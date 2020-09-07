@@ -53,6 +53,10 @@ const OffreSchema = new Schema({
         type: Date,
 
     },
+    statut: {
+        type: Boolean,
+        default: 1
+    },
     date_creation: {
         type: Date,
         default: Date.now,
