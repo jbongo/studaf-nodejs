@@ -8,6 +8,7 @@ const routes = (app) => {
     app.route('/user/profil')
 
     .get(auth, UserController.getUserProfile)
+        .post(auth, UserController.updateCandidatProfil)
 
 
     app.route('/register')
