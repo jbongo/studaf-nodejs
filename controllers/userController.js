@@ -99,9 +99,6 @@ const register = (req, res) => {
             return res.status(500).json({ 'error': err });
 
         });
-
-
-
 }
 
 
@@ -177,9 +174,108 @@ const getUserProfile = (req, res) => {
 }
 
 
+// Mettre à jour ou ajouter le profil du candidat
+const updateCandidatProfil = (req, res) => {
+
+    var headerAutho = req.headers['authorization'];
+    var userId = jwtUtils.getUserId(headerAutho);
+
+
+    if (userId < 0) {
+        return res.status(400).json({ 'error': "token incorrect" });
+    }
+
+
+    const email = req.body.email;
+
+    const nom = req.body.nom;
+    const prenom = req.body.prenom;
+    const poste = req.body.poste;
+    const experience = req.body.experience;
+    const date_naissance = req.body.date_naissance;
+
+    const pays = req.body.pays;
+    const ville = req.body.ville;
+    const description = req.body.description;
+    const contact = req.body.contact;
+
+    const facebook = req.body.facebook;
+    const twitter = req.body.twitter;
+    const linkedin = req.body.linkedin;
+    const site_web = req.body.site_web;
+
+    const photo_profil = req.body.photo_profil;
+    const photo_couverture = req.body.photo_couverture;
+    const date_creation = req.body.date_creation;
+    const date_modification = req.body.date_modification;
+
+
+    // B+Vérificatioins des valeurs saisies
+
+    if (!EMAIL_REGEX.test(email)) {
+        return res.status(409).json({ 'error': "Adresse mail incorrecte" });
+
+    }
+
+    let updatedUser = {
+
+        email: email,
+
+        nom: nom,
+        prenom: prenom,
+        poste: poste,
+        experience: experience,
+        date_naissance: date_naissance,
+
+        pays: pays,
+        ville: ville,
+        description: description,
+        contact1: contact,
+
+        facebook: facebook,
+        twitter: twitter,
+        linkedin: linkedin,
+        site_web: site_web,
+        photo_profil: photo_profil,
+        photo_couverture: photo_couverture,
+        date_creation: date_creation,
+        date_modification: date_modification,
+
+    };
+
+    User.findByIdAndUpdate({ _id: userId }, updatedUser, function(err, user) {
+
+            if (!err) {
+
+
+
+
+                // user.save((updatedUser) => {
+                // if (err) {
+                //     res.status(500).json({ 'error': err });
+                //     return;
+                // }
+                res.status(201).json({ user });
+                return;
+                // })
+
+            } else {
+                return res.status(409).json({ 'error': "Cet utilisateur n\'existe pas" });
+
+            }
+
+        })
+        .catch(function(err) {
+            return res.status(500).json({ 'error': err });
+
+        });
+}
+
+
 
 module.exports = {
     register,
     login,
-    getUserProfile
+    getUserProfile,
+    updateCandidatProfil
 };
