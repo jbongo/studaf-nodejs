@@ -5,9 +5,9 @@ const Schema = mongoose.Schema;
 
 const Cv_experienceSchema = new Schema({
 
-    cv_id: {
+    user_id: {
         type: String,
-        required: 'Entrez le cv_id'
+        required: 'Entrez le user_id'
     },
     
     titre: {
@@ -35,3 +35,5 @@ const Cv_experienceSchema = new Schema({
         default: Date.now,
     }
 });
+
+module.exports = Cv_experienceSchema;

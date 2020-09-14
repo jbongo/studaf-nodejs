@@ -247,14 +247,6 @@ const updateCandidatProfil = (req, res) => {
 
             if (!err) {
 
-
-
-
-                // user.save((updatedUser) => {
-                // if (err) {
-                //     res.status(500).json({ 'error': err });
-                //     return;
-                // }
                 res.status(201).json({ user });
                 return;
                 // })

@@ -23,9 +23,9 @@ module.exports = {
     // On reccupère le user_id contenu dans le token
     getUserId: function(authorisation) {
         var userId = -1;
-      var  token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjRhNTNjNzk1ZmQxYjE5MDg1MjNmYmMiLCJpYXQiOjE1OTg3MDY3MjgsImV4cCI6MTU5ODcxMzkyOH0.AfRDOXyVKPM2M3-UZYtBmfB5lPwZQmuGolvIogplg5M"
-        // var token = module.exports.parseAuthorization(authorisation);
-return 10
+    //   var  token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI1ZjRhNTNjNzk1ZmQxYjE5MDg1MjNmYmMiLCJpYXQiOjE1OTg3MDY3MjgsImV4cCI6MTU5ODcxMzkyOH0.AfRDOXyVKPM2M3-UZYtBmfB5lPwZQmuGolvIogplg5M"
+        var token = module.exports.parseAuthorization(authorisation);
+
 
 
         if (token != null) {
