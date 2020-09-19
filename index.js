@@ -34,7 +34,7 @@
      res.header({
          'content-type': 'application/json',
          'Access-Control-Allow-Origin': ORIGIN_URL,
-         'Access-Control-Allow-Headers': "authorization",
+         'Access-Control-Allow-Headers': "authorization, content-type",
      });
 
 

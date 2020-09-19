@@ -11,7 +11,7 @@ module.exports = {
                 type: userData.type,
             },
             JWT_SIGN_SECRET, {
-                expiresIn: '2h'
+                expiresIn: '6h'
             })
     },
     // on va parser l'autorisation réçu dans le header : AUthorisation afin de reccuperer uniquement le token
