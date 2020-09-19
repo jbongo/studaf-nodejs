@@ -15,7 +15,11 @@
  mongoose.Promise = global.Promise;
 //  const uri = 'mongodb://localhost/studafdb';
  const MONGODB_URI = process.env.MONGODB_URI || "mongodb+srv://studaf:Motdepasse@01@cluster0.r4ktj.mongodb.net/studafdb?retryWrites=true&w=majority";
- mongoose.connect(MONGODB_URI, { useNewUrlParser: true });
+ mongoose.connect(MONGODB_URI, { 
+     useNewUrlParser: true,
+     useUnifiedTopology: true
+
+});
 
  // bodyParser
 
