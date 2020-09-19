@@ -6,6 +6,11 @@ auth = require('../middleware/auth')
 
 const routes = (app) => {
 
+    app.get('/', (req,res)=> {
+        return res.send('hello')
+    });
+
+
     app.route('/user/profil')
 
     .get(auth, UserController.getUserProfile)
