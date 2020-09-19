@@ -2,6 +2,6 @@
     "name": "my-mongodb-api",
     "version": 2,
     "env": {
-      "MONGODB_URI": "@my-mongodb-uri"
+      "MONGODB_URI": "mongodb+srv://studaf:Motdepasse@01@cluster0.r4ktj.mongodb.net/studafdb?retryWrites=true&w=majority"
     }
   }
