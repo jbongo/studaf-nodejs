@@ -96,7 +96,6 @@ const updateFormation = (req, res) => {
 
     };
 
-    console.log(CvFormation_id);
 
     CvFormation.findByIdAndUpdate({_id: CvFormation_id }, cv_formation, function(err, CvFormationsupdated) {
 
@@ -157,7 +156,6 @@ const getFormation = (req, res) => {
 
         if (CvFormationsfound) {
 
-            console.log(CvFormationsfound[0]);
             return res.status(201).json({ 'data' : CvFormationsfound })
         } else {
 
@@ -184,7 +182,6 @@ const getAllFormations = (req, res) => {
 
         if (CvFormationsfound) {
 
-            console.log(CvFormationsfound[0]);
             return res.status(201).json({ 'data' : CvFormationsfound })
         } else {
 
@@ -340,7 +337,6 @@ const getExperience = (req, res) => {
 
         if (CvExperiencesfound) {
 
-            console.log(CvExperiencesfound[0]);
             return res.status(201).json({ 'data' : CvExperiencesfound })
         } else {
 
@@ -367,7 +363,6 @@ const getAllExperiences = (req, res) => {
 
         if (CvExperiencesfound) {
 
-            console.log(CvExperiencesfound[0]);
             return res.status(201).json({ 'data' : CvExperiencesfound })
         } else {
 

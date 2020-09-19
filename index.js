@@ -13,7 +13,9 @@
  // connection a mongodb
 
  mongoose.Promise = global.Promise;
- mongoose.connect('mongodb://localhost/studafdb', { useNewUrlParser: true });
+//  const uri = 'mongodb://localhost/studafdb';
+ const uri = "mongodb+srv://studaf:Motdepasse@01@cluster0.r4ktj.mongodb.net/studafdb?retryWrites=true&w=majority";
+ mongoose.connect(uri, { useNewUrlParser: true });
 
  // bodyParser
 
