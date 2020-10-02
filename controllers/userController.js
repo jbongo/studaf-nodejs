@@ -11,28 +11,28 @@ const register = (req, res) => {
     const email = req.body.email;
     const password = req.body.password;
     const type = req.body.type;
-    const nom = req.body.nom;
-    const prenom = req.body.prenom;
-    const poste = req.body.poste;
-    const experience = req.body.experience;
-    const date_naissance = req.body.date_naissance;
-    const raison_sociale = req.body.raison_sociale;
-    const date_creation_entreprise = req.body.date_creation_entreprise;
-    const nb_salarie = req.body.nb_salarie;
-    const categorie = req.body.categorie;
-    const pays = req.body.pays;
-    const ville = req.body.ville;
-    const description = req.body.description;
-    const contact1 = req.body.contact1;
-    const contact2 = req.body.contact2;
-    const facebook = req.body.facebook;
-    const twitter = req.body.twitter;
-    const linkedin = req.body.linkedin;
-    const site_web = req.body.site_web;
-    const photo_profil = req.body.photo_profil;
-    const photo_couverture = req.body.photo_couverture;
-    const date_creation = req.body.date_creation;
-    const date_modification = req.body.date_modification;
+    // const nom = req.body.nom;
+    // const prenom = req.body.prenom;
+    // const poste = req.body.poste;
+    // const experience = req.body.experience;
+    // const date_naissance = req.body.date_naissance;
+    // const raison_sociale = req.body.raison_sociale;
+    // const date_creation_entreprise = req.body.date_creation_entreprise;
+    // const nb_salarie = req.body.nb_salarie;
+    // const categorie = req.body.categorie;
+    // const pays = req.body.pays;
+    // const ville = req.body.ville;
+    // const description = req.body.description;
+    // const contact1 = req.body.contact1;
+    // const contact2 = req.body.contact2;
+    // const facebook = req.body.facebook;
+    // const twitter = req.body.twitter;
+    // const linkedin = req.body.linkedin;
+    // const site_web = req.body.site_web;
+    // const photo_profil = req.body.photo_profil;
+    // const photo_couverture = req.body.photo_couverture;
+    // const date_creation = req.body.date_creation;
+    // const date_modification = req.body.date_modification;
 
 
     // B+Vérificatioins des valeurs saisies
@@ -55,28 +55,28 @@ const register = (req, res) => {
                         email: email,
                         password: bcryptpassword,
                         type: type,
-                        nom: nom,
-                        prenom: prenom,
-                        poste: poste,
-                        experience: experience,
-                        date_naissance: date_naissance,
-                        raison_sociale: raison_sociale,
-                        date_creation_entreprise: date_creation_entreprise,
-                        nb_salarie: nb_salarie,
-                        categorie: categorie,
-                        pays: pays,
-                        ville: ville,
-                        description: description,
-                        contact1: contact1,
-                        contact2: contact2,
-                        facebook: facebook,
-                        twitter: twitter,
-                        linkedin: linkedin,
-                        site_web: site_web,
-                        photo_profil: photo_profil,
-                        photo_couverture: photo_couverture,
-                        date_creation: date_creation,
-                        date_modification: date_modification,
+                        // nom: nom,
+                        // prenom: prenom,
+                        // poste: poste,
+                        // experience: experience,
+                        // date_naissance: date_naissance,
+                        // raison_sociale: raison_sociale,
+                        // date_creation_entreprise: date_creation_entreprise,
+                        // nb_salarie: nb_salarie,
+                        // categorie: categorie,
+                        // pays: pays,
+                        // ville: ville,
+                        // description: description,
+                        // contact1: contact1,
+                        // contact2: contact2,
+                        // facebook: facebook,
+                        // twitter: twitter,
+                        // linkedin: linkedin,
+                        // site_web: site_web,
+                        // photo_profil: photo_profil,
+                        // photo_couverture: photo_couverture,
+                        // date_creation: date_creation,
+                        // date_modification: date_modification,
 
                     });
 
@@ -100,6 +100,10 @@ const register = (req, res) => {
 
         });
 }
+
+
+
+
 
 
 // ### Fonction de connexion
@@ -147,8 +151,10 @@ const login = (req, res) => {
 
 }
 
-// On réccupère le profil du user si le token est valide
 
+
+
+// On réccupère le profil du user si le token est valide
 const getUserProfile = (req, res) => {
 
     var headerAutho = req.headers['authorization'];
