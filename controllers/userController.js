@@ -132,16 +132,17 @@ const login = (req, res) => {
 
                         return res.status(200).json({
                             'userId': user.id,
+                            'role': user.type  ,
                             'token': jwtUtils.generateTokenForuser(user)
                         });
                     } else {
-                        return res.status(403).json({ 'error': 'Mot de passe invalide' });
+                        return res.status(203).json({ 'error': 'Identifiants invalides' });
                     }
                 });
 
 
             } else {
-                return res.status(400).json({ 'error': "Ce compte n\'existe pas" });
+                return res.status(203).json({ 'error': "Identifiants invalides" });
             }
 
         })
