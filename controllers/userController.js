@@ -141,7 +141,7 @@ const login = (req, res) => {
 
 
             } else {
-                return res.status(200).json({ 'error': "Ce compte n\'existe pas" });
+                return res.status(400).json({ 'error': "Ce compte n\'existe pas" });
             }
 
         })
