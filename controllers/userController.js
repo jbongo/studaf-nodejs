@@ -90,7 +90,8 @@ const register = (req, res) => {
                     });
                 });
             } else {
-                return res.status(409).json({ 'error': "l\'adresse mail existe déjà" });
+                 res.status(200).json({ 'error': "l\'adresse mail existe déjà" });
+                 return;
 
             }
 
