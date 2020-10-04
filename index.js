@@ -8,7 +8,8 @@
 
  app = express();
  const PORT = process.env.PORT || 4001;
- const ORIGIN_URL = process.env.ORIGIN_URL || "http://127.0.0.1:3000";
+ const ORIGIN_URL = "http://127.0.0.1:3000";
+//  const ORIGIN_URL = process.env.ORIGIN_URL || "http://127.0.0.1:3000";
 
  // connection a mongodb
 
